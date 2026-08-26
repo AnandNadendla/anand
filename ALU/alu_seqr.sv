@@ -1,9 +1,9 @@
-class alu_seqr extends uvm_sequence #(alu_seq_item);
+class alu_seqr extends uvm_sequencer #(alu_seq_item);
 
-  `uvm_object_utils(alu_seqr)
+  `uvm_component_utils(alu_seqr)
 
-  function new(string name = "alu_seqr");
-    super.new(name);
+  function new(string name = "alu_seqr", uvm_component parent = null);
+    super.new(name, parent);
   endfunction
 
   endclass
