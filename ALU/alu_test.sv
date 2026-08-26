@@ -14,11 +14,11 @@ class alu_test extends uvm_test;
   endfunction
 
   task run_phase(uvm_phase phase);
-    alu_seq sequence;
+    alu_seq alu_sequence;
 
     phase.raise_objection(this);
-    sequence = alu_seq::type_id::create("sequence");
-    sequence.start(m_env.m_agent.m_sequencer);
+    alu_sequence = alu_seq::type_id::create("alu_sequence");
+    alu_sequence.start(m_env.m_agent.m_sequencer);
     phase.drop_objection(this);
   endtask
 

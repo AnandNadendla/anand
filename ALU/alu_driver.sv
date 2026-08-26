@@ -12,7 +12,7 @@ function new(string name = "alu_driver", uvm_component parent);
     item=alu_seq_item::type_id::create("item");
 
     if(!uvm_config_db#(virtual intf)::get(this, "*", "vif", vif))
-      `uvm_fatal("NOVIF", "Virtual interface must be set for: " + get_full_name() + ".vif");
+      `uvm_fatal("NOVIF", $sformatf("Virtual interface must be set for: %s.vif", get_full_name()));
       endfunction
 
       task run_phase(uvm_phase phase);

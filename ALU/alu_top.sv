@@ -4,6 +4,7 @@ module alu_top;
 
   import uvm_pkg::*;
   `include "uvm_macros.svh"
+  `include "files.sv"
 
   logic clk;
   logic rst_n;
